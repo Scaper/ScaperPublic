@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32922.545
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "Scaper", "Scaper\Scaper.fsproj", "{EB48A2AB-8B1E-45AD-B907-B92C04DBAD05}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EB48A2AB-8B1E-45AD-B907-B92C04DBAD05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB48A2AB-8B1E-45AD-B907-B92C04DBAD05}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB48A2AB-8B1E-45AD-B907-B92C04DBAD05}.Debug|x64.ActiveCfg = Debug|x64
+		{EB48A2AB-8B1E-45AD-B907-B92C04DBAD05}.Debug|x64.Build.0 = Debug|x64
+		{EB48A2AB-8B1E-45AD-B907-B92C04DBAD05}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB48A2AB-8B1E-45AD-B907-B92C04DBAD05}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EB48A2AB-8B1E-45AD-B907-B92C04DBAD05}.Release|x64.ActiveCfg = Release|x64
+		{EB48A2AB-8B1E-45AD-B907-B92C04DBAD05}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {83B9CE13-F737-4575-B596-016888BD22B5}
+	EndGlobalSection
+EndGlobal

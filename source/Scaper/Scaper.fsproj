@@ -1,0 +1,83 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<OutputType>Exe</OutputType>
+		<TargetFramework>net9.0</TargetFramework>
+		<Platforms>AnyCPU;x64</Platforms>
+		<NoWarn>FS3391,NU1603</NoWarn>
+		<ResolveAssemblyWarnOrErrorOnTargetArchitectureMismatch>None</ResolveAssemblyWarnOrErrorOnTargetArchitectureMismatch>
+		<ServerGarbageCollection>true</ServerGarbageCollection>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+		<Tailcalls>True</Tailcalls>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<Compile Include="Helpers\Span.fs" />
+		<Compile Include="Helpers\Helpers.fs" />
+		<Compile Include="Helpers\Progress.fs" />
+		<Compile Include="Helpers\Matrix.fs" />
+		<Compile Include="Estimation\Parameters.fs" />
+		<Compile Include="Estimation\CostFunction.fs" />
+		<Compile Include="Estimation\LogLikelihoodLC.fs" />
+		<Compile Include="Estimation\LineSearch.fs" />
+		<Compile Include="Estimation\Output.fs" />
+		<Compile Include="Estimation\BFGS.fs" />
+		<Compile Include="Model\Definitions.fs" />
+		<Compile Include="Model\DataSources.fs" />
+		<Compile Include="Model\LandUse.fs" />
+		<Compile Include="Model\Network.fs" />
+		<Compile Include="Model\World.fs" />
+		<Compile Include="Model\Observations.fs" />
+		<Compile Include="Model\StateSpace.fs" />
+		<Compile Include="Model\TripConversion.fs" />
+		<Compile Include="Model\Utility.fs" />
+		<Compile Include="Core\EVCache.fs" />
+		<Compile Include="Core\UtilityFuncs.fs" />
+		<Compile Include="Core\ZoneSampling.fs" />
+		<Compile Include="Core\ValueFunction.fs" />
+		<Compile Include="Core\Simulation.fs" />
+		<Compile Include="Core\Choicesets.fs" />
+		<Compile Include="Core\Estimation.fs" />
+		<Compile Include="Derivatives\TravelDerivative.fs" />
+		<Compile Include="Derivatives\DerivativeApproxVF.fs" />
+		<Compile Include="Derivatives\DerivativeTheoreticalVF.fs" />
+		<Compile Include="Derivatives\Derivatives.fs" />
+		<Compile Include="Program.fs" />
+	</ItemGroup>
+
+	<ItemGroup>
+	    <PackageReference Include="CsvHelper" Version="33.0.1">
+	      <TreatAsUsed>true</TreatAsUsed>
+	    </PackageReference>
+	    <PackageReference Include="FSharp.Collections.ParallelSeq" Version="1.2.0">
+	      <TreatAsUsed>true</TreatAsUsed>
+	    </PackageReference>
+	    <PackageReference Include="FSharp.Data" Version="6.4.0">
+	      <TreatAsUsed>true</TreatAsUsed>
+	    </PackageReference>
+	    <PackageReference Include="FSharp.SystemCommandLine" Version="0.17.0-beta4">
+	      <TreatAsUsed>true</TreatAsUsed>
+	    </PackageReference>
+	    <PackageReference Include="FSharpx.Extras" Version="3.2.1">
+	      <TreatAsUsed>true</TreatAsUsed>
+	    </PackageReference>
+	    <PackageReference Include="MKL.NET" Version="1.6.0">
+	      <TreatAsUsed>true</TreatAsUsed>
+	    </PackageReference>
+	    <PackageReference Include="MKL.NET.Optimization" Version="1.0.0">
+	      <TreatAsUsed>true</TreatAsUsed>
+	    </PackageReference>
+	    <PackageReference Condition="'$([System.Runtime.InteropServices.RuntimeInformation]::IsOSPlatform($([System.Runtime.InteropServices.OSPlatform]::Windows)))' == 'true'" Include="MKL.NET.win-x64" Version="2022.0.0.115" />
+		<PackageReference Condition="'$([System.Runtime.InteropServices.RuntimeInformation]::IsOSPlatform($([System.Runtime.InteropServices.OSPlatform]::Windows)))' == 'false'" Include="MKL.NET.linux-x64" Version="2022.0.1.117" />
+
+		<PackageReference Include="Open.Disposable.ObjectPools" Version="2.9.0">
+	      <TreatAsUsed>true</TreatAsUsed>
+	    </PackageReference>
+	    <PackageReference Include="Parquet.Net" Version="5.0.2">
+	      <TreatAsUsed>true</TreatAsUsed>
+	    </PackageReference>
+	</ItemGroup>
+
+</Project>
