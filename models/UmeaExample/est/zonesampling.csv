@@ -1,0 +1,6 @@
+parameter,value,estimate
+LogEmp,0.483550145,TRUE
+LogPop,0.097673026,TRUE
+DistHome_Worker,-0.014195045,TRUE
+DistWork_Worker,-0.002739345,TRUE
+DistHome_Nonworker,-0.010589306,TRUE

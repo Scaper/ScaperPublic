@@ -4,8 +4,13 @@
 ## Get latest from https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
 
 # Model files directory
-models/
-!models/UmeaExample/input
+
+models/*
+!models/UmeaExample
+models/UmeaExample/*
+!models/UmeaExample/input/
+!models/UmeaExample/est/
+models/UmeaExample/est/*
 !models/UmeaExample/est/zonesampling.csv
 !models/UmeaExample/est/startparams.csv
 
