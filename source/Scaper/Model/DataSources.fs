@@ -34,7 +34,7 @@ let zoneFile = inputFolder + "landuse.csv"
 
 ///The source of the transport network data (i.e. levels of service by O/D)
 [<Literal>]
-let networkFile = inputFolder + "network.parquet"
+let networkFile = inputFolder + "matsim_los.parquet"
 
 ///The source of agents to use for simulation or choiceset generation
 [<Literal>]
